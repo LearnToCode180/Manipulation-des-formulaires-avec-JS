@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LearnToCode</title>
+	<link rel="stylesheet" type="text/css" href="test.css">
+</head>
+<body>
+
+	<style>
+	        body{
+	               text-align: center;
+	               margin-top: 200px;
+                               }
+                       </style>
+
+
+	<form name="myForm">
+		
+		<!-- <label for="nb1">
+			Entrez le premier nombre:
+			<input type="text" name="nb1" required>
+		</label>
+		<br><br>
+		<label for="nb2">
+			Entrez le deuxime nombre:
+			<input type="text" name="nb2" required>
+		</label>
+		<br><br> -->
+		<label for="couleurs">
+			Choisissez une couleur:
+			<select name="couleurs" id="couleurs">
+				<option value="rouge">rouge</option>
+				<option value="vert">vert</option>
+				<option value="bleu">bleu</option>
+				<option value="jaune">jaune</option>
+			</select>
+		</label>
+		<br><br>
+		<label for="sexe">
+			Entrez votre sexe:
+			<label for="homme">
+				homme
+				<input type="radio" name="sexe" value="homme" id="homme">
+			</label>
+			<label for="femme">
+				femme
+				<input type="radio" name="sexe" value="femme" id="femme">
+			</label>
+			
+		</label>
+		<br><br>
+
+		<label for="voitures">
+			Cochez vos voitures preferees:
+			<label for="BMW">
+				BMW
+				<input type="checkbox" name="voitures" value="BMW" id="BMW">
+			</label>
+			<label for="Mercedes">
+				Mercedes
+				<input type="checkbox" name="voitures" value="Mercedes" id="Mercedes">
+			</label>
+			<label for="Audi">
+				Audi
+				<input type="checkbox" name="voitures" value="Audi" id="Audi">
+			</label>
+		</label>
+		<br><br>
+		<input type="submit" value="calculer" onclick="fct()">
+
+	</form>
+
+
+
+    <script>
+
+		
+		function fct(){
+			// var nb1 = parseInt(document.myForm.nb1.value);
+			// var nb2 = parseInt(document.myForm.nb2.value);
+			// var resultat = nb1 + nb2;
+			// alert('Le resulat est:'+ resultat);
+
+			// var couleur = document.getElementById('couleurs').value;
+
+			// var sexe = document.myForm.sexe.value;
+
+			var voitures = document.myForm.voitures;
+
+			voitures.forEach(fct1);
+
+			function fct1(item,index){
+				if(item.checked == true)
+					alert('Les voitures que vous avez Choisissez sont: ' + item.value);
+			}
+
+			
+		}
+
+
+
+    </script>
+
+    
+	
+</body>
+</html>
+<!--*********************************************************************-->
